@@ -46,14 +46,51 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="ITServiceProjectBeaudDeBlasiDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ITServiceProjectBeaudDeBlasiDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ITServiceProjectBeaudDeBlasiDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ITServiceProjectBeaudDeBlasiDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Window-Admin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Window-Admin.Designer.cs">
+      <DependentUpon>Window-Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Window-User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Window-User.Designer.cs">
+      <DependentUpon>Window-User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows-PayOnline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows-PayOnline.Designer.cs">
+      <DependentUpon>Windows-PayOnline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Window-Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Window-Home.Designer.cs">
+      <DependentUpon>Window-Home.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Window-Admin.resx">
+      <DependentUpon>Window-Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Window-Home.resx">
+      <DependentUpon>Window-Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Window-User.resx">
+      <DependentUpon>Window-User.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -63,6 +100,31 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Windows-PayOnline.resx">
+      <DependentUpon>Windows-PayOnline.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ITServiceProjectBeaudDeBlasiDataSet.xsc">
+      <DependentUpon>ITServiceProjectBeaudDeBlasiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ITServiceProjectBeaudDeBlasiDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ITServiceProjectBeaudDeBlasiDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ITServiceProjectBeaudDeBlasiDataSet.xss">
+      <DependentUpon>ITServiceProjectBeaudDeBlasiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ITServiceProjectBeaudDeBlasiDataSet1.xsc">
+      <DependentUpon>ITServiceProjectBeaudDeBlasiDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ITServiceProjectBeaudDeBlasiDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ITServiceProjectBeaudDeBlasiDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ITServiceProjectBeaudDeBlasiDataSet1.xss">
+      <DependentUpon>ITServiceProjectBeaudDeBlasiDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
