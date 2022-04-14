@@ -12,6 +12,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{2430D92B-D80C-435C-9B76-ACE9409BA4FA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsPrinter", "WindowsFormsPrinter\WindowsFormsPrinter.csproj", "{AA384C46-BE41-43EE-B13B-1A6CC3371164}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E967FF61-FE9D-4AA2-A66E-7A6E79F9B298} = {E967FF61-FE9D-4AA2-A66E-7A6E79F9B298}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
