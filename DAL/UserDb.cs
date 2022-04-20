@@ -28,7 +28,7 @@ namespace DAL
             {
                 using (SqlConnection cn = new SqlConnection(connectionString))
                 {
-                    string query = "SELECT * FROM UserAmount where UserId = @userId";
+                    string query = "SELECT UserAmount FROM Users where UserId = @userId";
                     SqlCommand cmd = new SqlCommand(query, cn);
                     cmd.Parameters.AddWithValue("@userId", userId);
                     cn.Open();
