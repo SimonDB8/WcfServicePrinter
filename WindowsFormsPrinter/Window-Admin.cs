@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsPrinter
 {
-    public partial class Admin : Form
+    public partial class administration : Form
     {
-        public Admin()
+        public administration()
         {
             InitializeComponent();
         }
@@ -23,6 +23,11 @@ namespace WindowsFormsPrinter
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void retourHome_Click(object sender, EventArgs e)
         {
 
         }

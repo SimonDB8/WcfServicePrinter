@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsPrinter
 {
-    partial class Form4
+    partial class homeUser
     {
         /// <summary>
         /// Required designer variable.
@@ -29,69 +29,146 @@ namespace WindowsFormsPrinter
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.userIdBox = new System.Windows.Forms.TextBox();
             this.resultAmount = new System.Windows.Forms.TextBox();
             this.searchButton = new System.Windows.Forms.Button();
+            this.userPage = new System.Windows.Forms.Button();
+            this.adminPage = new System.Windows.Forms.Button();
+            this.payOnlinePage = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 16);
-            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(135, 29);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Home User";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // userIdBox
             // 
-            this.userIdBox.Location = new System.Drawing.Point(541, 194);
+            this.userIdBox.Location = new System.Drawing.Point(137, 75);
             this.userIdBox.Name = "userIdBox";
             this.userIdBox.Size = new System.Drawing.Size(262, 35);
             this.userIdBox.TabIndex = 2;
             // 
             // resultAmount
             // 
-            this.resultAmount.Location = new System.Drawing.Point(541, 409);
+            this.resultAmount.Location = new System.Drawing.Point(267, 170);
             this.resultAmount.Name = "resultAmount";
-            this.resultAmount.Size = new System.Drawing.Size(262, 35);
+            this.resultAmount.Size = new System.Drawing.Size(132, 35);
             this.resultAmount.TabIndex = 3;
             // 
             // searchButton
             // 
-            this.searchButton.Location = new System.Drawing.Point(589, 249);
+            this.searchButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.searchButton.Location = new System.Drawing.Point(466, 67);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(180, 66);
+            this.searchButton.Size = new System.Drawing.Size(180, 51);
             this.searchButton.TabIndex = 4;
             this.searchButton.Text = "Chercher";
-            this.searchButton.UseVisualStyleBackColor = true;
+            this.searchButton.UseVisualStyleBackColor = false;
             this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
-            // Form4
+            // userPage
+            // 
+            this.userPage.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.userPage.Location = new System.Drawing.Point(39, 556);
+            this.userPage.Name = "userPage";
+            this.userPage.Size = new System.Drawing.Size(211, 78);
+            this.userPage.TabIndex = 5;
+            this.userPage.Text = "User";
+            this.userPage.UseVisualStyleBackColor = false;
+            this.userPage.Click += new System.EventHandler(this.userPage_Click);
+            // 
+            // adminPage
+            // 
+            this.adminPage.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.adminPage.Location = new System.Drawing.Point(314, 556);
+            this.adminPage.Name = "adminPage";
+            this.adminPage.Size = new System.Drawing.Size(211, 78);
+            this.adminPage.TabIndex = 6;
+            this.adminPage.Text = "Administration";
+            this.adminPage.UseVisualStyleBackColor = false;
+            this.adminPage.Click += new System.EventHandler(this.adminPage_Click);
+            // 
+            // payOnlinePage
+            // 
+            this.payOnlinePage.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.payOnlinePage.Location = new System.Drawing.Point(587, 556);
+            this.payOnlinePage.Name = "payOnlinePage";
+            this.payOnlinePage.Size = new System.Drawing.Size(211, 78);
+            this.payOnlinePage.TabIndex = 7;
+            this.payOnlinePage.Text = "PayOnline";
+            this.payOnlinePage.UseVisualStyleBackColor = false;
+            this.payOnlinePage.Click += new System.EventHandler(this.payOnlinePage_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(64, 75);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 29);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "UID";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(64, 173);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(197, 29);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Crédit disponible";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(64, 257);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(244, 29);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Nombre d\'impression";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(314, 254);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(85, 35);
+            this.textBox1.TabIndex = 11;
+            // 
+            // homeUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1400, 816);
+            this.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.ClientSize = new System.Drawing.Size(836, 654);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.payOnlinePage);
+            this.Controls.Add(this.adminPage);
+            this.Controls.Add(this.userPage);
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.resultAmount);
             this.Controls.Add(this.userIdBox);
-            this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.Name = "Form4";
-            this.Text = "Form4";
+            this.Margin = new System.Windows.Forms.Padding(5);
+            this.Name = "homeUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Home";
+            this.Load += new System.EventHandler(this.homeUser_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox userIdBox;
         private System.Windows.Forms.TextBox resultAmount;
         private System.Windows.Forms.Button searchButton;
+        private System.Windows.Forms.Button userPage;
+        private System.Windows.Forms.Button adminPage;
+        private System.Windows.Forms.Button payOnlinePage;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsPrinter
 {
-    public partial class User : Form
+    public partial class user : Form
     {
-        public User()
+        public user()
         {
             InitializeComponent();
         }
