@@ -15,7 +15,7 @@ namespace DAL
         private string connectionString = null;
         public UserDb()
         {
-            connectionString = ConfigurationManager.ConnectionStrings["ITServiceProjectBeaudDeBlasiConnectionString"].ConnectionString;
+            connectionString = "Data Source = 153.109.124.35; Initial Catalog = ITServiceProjectBeaudDeBlasi; Persist Security Info = True; User ID = 6231db; Password = Pwd46231.";
         }
 
 
