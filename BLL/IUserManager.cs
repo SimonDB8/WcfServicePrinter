@@ -10,5 +10,9 @@ namespace BLL
     public interface IUserManager
     {
         User GetAmountByUserId(int userId);
+
+        void AddAmountByUserId(int userId, int amount);
     }
+
+   
 }

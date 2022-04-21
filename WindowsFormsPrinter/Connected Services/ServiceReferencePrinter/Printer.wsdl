@@ -12,16 +12,35 @@
   <wsdl:message name="IPrinter_GetAmountByUserId_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAmountByUserIdResponse" />
   </wsdl:message>
+  <wsdl:message name="IPrinter_AddAmountByUserId_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddAmountByUserId" />
+  </wsdl:message>
+  <wsdl:message name="IPrinter_AddAmountByUserId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddAmountByUserIdResponse" />
+  </wsdl:message>
   <wsdl:portType name="IPrinter">
     <wsdl:operation name="GetAmountByUserId">
       <wsdl:input wsaw:Action="http://tempuri.org/IPrinter/GetAmountByUserId" message="tns:IPrinter_GetAmountByUserId_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IPrinter/GetAmountByUserIdResponse" message="tns:IPrinter_GetAmountByUserId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAmountByUserId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrinter/AddAmountByUserId" message="tns:IPrinter_AddAmountByUserId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrinter/AddAmountByUserIdResponse" message="tns:IPrinter_AddAmountByUserId_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IPrinter" type="tns:IPrinter">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="GetAmountByUserId">
       <soap:operation soapAction="http://tempuri.org/IPrinter/GetAmountByUserId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAmountByUserId">
+      <soap:operation soapAction="http://tempuri.org/IPrinter/AddAmountByUserId" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

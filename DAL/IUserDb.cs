@@ -10,5 +10,7 @@ namespace DAL
     public interface IUserDb
     {
         User GetAmountByUserId(int userId);
+
+        void AddAmountByUserId(int userId, int amount);
     }
 }

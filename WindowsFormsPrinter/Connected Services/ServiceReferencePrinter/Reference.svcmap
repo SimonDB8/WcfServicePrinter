@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c14d3ab4-b0af-4203-b008-d37770aa7cf7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b61ca608-befd-4659-98ec-b82529cbe2e9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,10 +22,10 @@
     <MetadataSource Address="http://localhost:61520/Printer.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Printer.xsd" MetadataType="Schema" ID="137da3cf-a30f-4223-bb2e-ff20e1220484" SourceId="1" SourceUrl="http://localhost:61520/Printer.svc?xsd=xsd0" />
-    <MetadataFile FileName="Printer1.xsd" MetadataType="Schema" ID="8b70c6f1-c6fd-4a17-b36a-219d1fb75cf7" SourceId="1" SourceUrl="http://localhost:61520/Printer.svc?xsd=xsd1" />
-    <MetadataFile FileName="Printer.disco" MetadataType="Disco" ID="e1896afb-db26-428d-8ed0-ccb3347a5fdc" SourceId="1" SourceUrl="http://localhost:61520/Printer.svc?disco" />
-    <MetadataFile FileName="Printer.wsdl" MetadataType="Wsdl" ID="01a4c88d-a039-43ea-8a7d-48facbb211dd" SourceId="1" SourceUrl="http://localhost:61520/Printer.svc?wsdl" />
+    <MetadataFile FileName="Printer.xsd" MetadataType="Schema" ID="0a35c991-acc9-4fbd-8e62-87a66071fa0c" SourceId="1" SourceUrl="http://localhost:61520/Printer.svc?xsd=xsd0" />
+    <MetadataFile FileName="Printer1.xsd" MetadataType="Schema" ID="46fa0ca8-cd03-43e7-a206-f153aaa655ec" SourceId="1" SourceUrl="http://localhost:61520/Printer.svc?xsd=xsd1" />
+    <MetadataFile FileName="Printer.disco" MetadataType="Disco" ID="dcfb1406-c364-46c5-b046-3a3850ebbf3d" SourceId="1" SourceUrl="http://localhost:61520/Printer.svc?disco" />
+    <MetadataFile FileName="Printer.wsdl" MetadataType="Wsdl" ID="bb0bcb86-64ce-49c6-8bcb-98cd4b57aade" SourceId="1" SourceUrl="http://localhost:61520/Printer.svc?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

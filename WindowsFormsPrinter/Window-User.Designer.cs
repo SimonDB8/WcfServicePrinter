@@ -29,24 +29,24 @@ namespace WindowsFormsPrinter
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.AddAmountByUserIdButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.UID = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.AmountBox = new System.Windows.Forms.TextBox();
+            this.UserIdBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // button1
+            // AddAmountByUserIdButton
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(430, 419);
-            this.button1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(182, 80);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Ajouter";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.AddAmountByUserIdButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.AddAmountByUserIdButton.Location = new System.Drawing.Point(430, 419);
+            this.AddAmountByUserIdButton.Margin = new System.Windows.Forms.Padding(5);
+            this.AddAmountByUserIdButton.Name = "AddAmountByUserIdButton";
+            this.AddAmountByUserIdButton.Size = new System.Drawing.Size(182, 80);
+            this.AddAmountByUserIdButton.TabIndex = 10;
+            this.AddAmountByUserIdButton.Text = "Ajouter";
+            this.AddAmountByUserIdButton.UseVisualStyleBackColor = false;
+            this.AddAmountByUserIdButton.Click += new System.EventHandler(this.AddAmountByUserIdButton_Click);
             // 
             // label3
             // 
@@ -70,23 +70,23 @@ namespace WindowsFormsPrinter
             this.UID.Text = "UID";
             this.UID.Click += new System.EventHandler(this.label2_Click);
             // 
-            // textBox2
+            // AmountBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(207, 340);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(405, 35);
-            this.textBox2.TabIndex = 7;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.AmountBox.Location = new System.Drawing.Point(207, 340);
+            this.AmountBox.Margin = new System.Windows.Forms.Padding(5);
+            this.AmountBox.Name = "AmountBox";
+            this.AmountBox.Size = new System.Drawing.Size(405, 35);
+            this.AmountBox.TabIndex = 7;
+            this.AmountBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // textBox1
+            // UserIdBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(207, 205);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(405, 35);
-            this.textBox1.TabIndex = 6;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.UserIdBox.Location = new System.Drawing.Point(207, 205);
+            this.UserIdBox.Margin = new System.Windows.Forms.Padding(5);
+            this.UserIdBox.Name = "UserIdBox";
+            this.UserIdBox.Size = new System.Drawing.Size(405, 35);
+            this.UserIdBox.TabIndex = 6;
+            this.UserIdBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // user
             // 
@@ -94,12 +94,12 @@ namespace WindowsFormsPrinter
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
             this.ClientSize = new System.Drawing.Size(836, 654);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.AddAmountByUserIdButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.UID);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Controls.Add(this.AmountBox);
+            this.Controls.Add(this.UserIdBox);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "user";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User";
@@ -109,10 +109,10 @@ namespace WindowsFormsPrinter
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button AddAmountByUserIdButton;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label UID;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox AmountBox;
+        private System.Windows.Forms.TextBox UserIdBox;
     }
 }
