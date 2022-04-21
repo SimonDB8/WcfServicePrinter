@@ -34,6 +34,8 @@ namespace WindowsFormsPrinter
             this.UID = new System.Windows.Forms.Label();
             this.AmountBox = new System.Windows.Forms.TextBox();
             this.UserIdBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.NewAmountBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // AddAmountByUserIdButton
@@ -88,12 +90,31 @@ namespace WindowsFormsPrinter
             this.UserIdBox.TabIndex = 6;
             this.UserIdBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(202, 532);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(319, 29);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Nouveau montant disponible";
+            // 
+            // NewAmountBox
+            // 
+            this.NewAmountBox.Location = new System.Drawing.Point(207, 583);
+            this.NewAmountBox.Name = "NewAmountBox";
+            this.NewAmountBox.Size = new System.Drawing.Size(405, 35);
+            this.NewAmountBox.TabIndex = 12;
+            this.NewAmountBox.TextChanged += new System.EventHandler(this.NewAmountBox_TextChanged);
+            // 
             // user
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
             this.ClientSize = new System.Drawing.Size(836, 654);
+            this.Controls.Add(this.NewAmountBox);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.AddAmountByUserIdButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.UID);
@@ -114,5 +135,7 @@ namespace WindowsFormsPrinter
         private System.Windows.Forms.Label UID;
         private System.Windows.Forms.TextBox AmountBox;
         private System.Windows.Forms.TextBox UserIdBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox NewAmountBox;
     }
 }

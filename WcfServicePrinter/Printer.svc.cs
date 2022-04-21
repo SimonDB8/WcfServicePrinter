@@ -11,11 +11,12 @@ namespace WcfServicePrinter
 {
     public class Printer : IPrinter
     {
-        public void AddAmountByUserId(int userId, int amount)
+        public int AddAmountByUserId(int userId, int amount)
         {
             IUserDb userDb = new UserDb();
             IUserManager userManager = new UserManager(userDb);
-            userManager.AddAmountByUserId(userId, amount);
+            var user = userManager.AddAmountByUserId(userId, amount);
+            return user.userAmount;
         }
 
         public int GetAmountByUserId(int userId)

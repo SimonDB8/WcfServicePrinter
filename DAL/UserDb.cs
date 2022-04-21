@@ -15,10 +15,44 @@ namespace DAL
         private string connectionString = null;
         public UserDb()
         {
-            connectionString = ConfigurationManager.ConnectionStrings["ITServiceProjectBeaudDeBlasiConnectionString"].ConnectionString;
+            connectionString = "Data Source = 153.109.124.35; Initial Catalog = ITServiceProjectBeaudDeBlasi; Persist Security Info = True; User ID = 6231db; Password = Pwd46231.";
         }
 
+        public User AddAmountByUserId(int userId, int amount)
 
+        {
+            User result = null;
+
+            try
+            {
+                using (SqlConnection cn = new SqlConnection(connectionString))
+                {
+                    string query = "UPDATE Users SET UserAmount=@amount+UserAmount WHERE UserId = @userId";
+                    SqlCommand cmd = new SqlCommand(query, cn);
+                    cmd.Parameters.AddWithValue("@amount", amount);
+                    cmd.Parameters.AddWithValue("@userId", userId);
+                    cn.Open();
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                      
+                            if (dr.Read())
+                            {
+                                result = new User();
+
+                                result.userAmount = (int)dr["UserAmount"]+amount;
+                            }
+                        
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+
+            return result;
+        }
 
         public User GetAmountByUserId(int userId)
         {

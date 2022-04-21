@@ -14,6 +14,6 @@ namespace WcfServicePrinter
         int GetAmountByUserId(int userId);
 
         [OperationContract]
-        void AddAmountByUserId(int userId, int amount);
+        int AddAmountByUserId(int userId, int amount);
     }
 }

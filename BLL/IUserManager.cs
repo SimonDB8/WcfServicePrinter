@@ -11,7 +11,7 @@ namespace BLL
     {
         User GetAmountByUserId(int userId);
 
-        void AddAmountByUserId(int userId, int amount);
+        User AddAmountByUserId(int userId, int amount);
     }
 
    

@@ -22,10 +22,10 @@ namespace WindowsFormsPrinter.ServiceReferencePrinter {
         System.Threading.Tasks.Task<int> GetAmountByUserIdAsync(int userId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrinter/AddAmountByUserId", ReplyAction="http://tempuri.org/IPrinter/AddAmountByUserIdResponse")]
-        void AddAmountByUserId(int userId, int amount);
+        int AddAmountByUserId(int userId, int amount);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrinter/AddAmountByUserId", ReplyAction="http://tempuri.org/IPrinter/AddAmountByUserIdResponse")]
-        System.Threading.Tasks.Task AddAmountByUserIdAsync(int userId, int amount);
+        System.Threading.Tasks.Task<int> AddAmountByUserIdAsync(int userId, int amount);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -63,11 +63,11 @@ namespace WindowsFormsPrinter.ServiceReferencePrinter {
             return base.Channel.GetAmountByUserIdAsync(userId);
         }
         
-        public void AddAmountByUserId(int userId, int amount) {
-            base.Channel.AddAmountByUserId(userId, amount);
+        public int AddAmountByUserId(int userId, int amount) {
+            return base.Channel.AddAmountByUserId(userId, amount);
         }
         
-        public System.Threading.Tasks.Task AddAmountByUserIdAsync(int userId, int amount) {
+        public System.Threading.Tasks.Task<int> AddAmountByUserIdAsync(int userId, int amount) {
             return base.Channel.AddAmountByUserIdAsync(userId, amount);
         }
     }

@@ -11,6 +11,6 @@ namespace DAL
     {
         User GetAmountByUserId(int userId);
 
-        void AddAmountByUserId(int userId, int amount);
+       User AddAmountByUserId(int userId, int amount);
     }
 }
