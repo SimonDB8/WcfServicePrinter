@@ -27,10 +27,10 @@ namespace DAL
             {
                 using (SqlConnection cn = new SqlConnection(connectionString))
                 {
-                    string query = "UPDATE Users SET UserAmount=@amount+UserAmount WHERE UserId = @userId";
+                    string query = "UPDATE Users SET UserAmount=@amount WHERE UserId = @userId";
                     SqlCommand cmd = new SqlCommand(query, cn);
-                    cmd.Parameters.AddWithValue("@amount", amount);
                     cmd.Parameters.AddWithValue("@userId", userId);
+                    cmd.Parameters.AddWithValue("@amount", amount);
                     cn.Open();
 
                     using (SqlDataReader dr = cmd.ExecuteReader())
@@ -40,7 +40,9 @@ namespace DAL
                             {
                                 result = new User();
 
-                                result.userAmount = (int)dr["UserAmount"]+amount;
+                                result.userId = (int)dr["userId"];
+                                result.userName = (string)dr["userName"];
+                                result.userAmount = (int)dr["UserAmount"];
                             }
                         
                     }
@@ -85,5 +87,54 @@ namespace DAL
 
             return result;
         }
+
+
+        public User getUserById(int userId)
+        {
+            User result = null;
+
+            try
+            {
+                using (SqlConnection cn = new SqlConnection(connectionString))
+                {
+                    string query = "SELECt * FROM Users WHERE UserId = @userId;";
+                    SqlCommand cmd = new SqlCommand(query, cn);
+                    cmd.Parameters.Add("@userId", userId);
+                    cn.Open();
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        if (dr.Read())
+                        {
+                            result = new User();
+
+                            result.userId = (int)dr["userId"];
+                            result.userName = (string)dr["userName"];
+                            result.userAmount = (int)dr["UserAmount"];
+                        }
+                    }
+                }
+            }catch (Exception e)
+            {
+                throw e;
+            }
+
+            return result;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }

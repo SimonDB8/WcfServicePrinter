@@ -26,6 +26,7 @@
     <MetadataFile FileName="Printer1.xsd" MetadataType="Schema" ID="ab1a31b7-1674-489e-900a-ef4add2c8ece" SourceId="1" SourceUrl="http://localhost:61520/Printer.svc?xsd=xsd1" />
     <MetadataFile FileName="Printer.disco" MetadataType="Disco" ID="1470bf16-f929-4d4d-9e40-3f8eec7adfa6" SourceId="1" SourceUrl="http://localhost:61520/Printer.svc?disco" />
     <MetadataFile FileName="Printer.wsdl" MetadataType="Wsdl" ID="a8d4a0d7-084c-4146-b99b-48c7b6581c15" SourceId="1" SourceUrl="http://localhost:61520/Printer.svc?wsdl" />
+    <MetadataFile FileName="Printer2.xsd" MetadataType="Schema" ID="2dff1df8-c6a4-42d3-a27d-0991b70cdc2e" SourceId="1" SourceUrl="http://localhost:61520/Printer.svc?xsd=xsd2" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

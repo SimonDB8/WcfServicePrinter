@@ -9,7 +9,86 @@
 //------------------------------------------------------------------------------
 
 namespace WindowsFormsPrinter.ServiceReferencePrinter {
+    using System.Runtime.Serialization;
+    using System;
     
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="User", Namespace="http://schemas.datacontract.org/2004/07/DTO")]
+    [System.SerializableAttribute()]
+    public partial class User : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int userAmountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int userIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string userNameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int userAmount {
+            get {
+                return this.userAmountField;
+            }
+            set {
+                if ((this.userAmountField.Equals(value) != true)) {
+                    this.userAmountField = value;
+                    this.RaisePropertyChanged("userAmount");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int userId {
+            get {
+                return this.userIdField;
+            }
+            set {
+                if ((this.userIdField.Equals(value) != true)) {
+                    this.userIdField = value;
+                    this.RaisePropertyChanged("userId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string userName {
+            get {
+                return this.userNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.userNameField, value) != true)) {
+                    this.userNameField = value;
+                    this.RaisePropertyChanged("userName");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReferencePrinter.IPrinter")]
@@ -22,10 +101,10 @@ namespace WindowsFormsPrinter.ServiceReferencePrinter {
         System.Threading.Tasks.Task<int> GetAmountByUserIdAsync(int userId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrinter/AddAmountByUserId", ReplyAction="http://tempuri.org/IPrinter/AddAmountByUserIdResponse")]
-        int AddAmountByUserId(int userId, int amount);
+        WindowsFormsPrinter.ServiceReferencePrinter.User AddAmountByUserId(int userId, int amount);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrinter/AddAmountByUserId", ReplyAction="http://tempuri.org/IPrinter/AddAmountByUserIdResponse")]
-        System.Threading.Tasks.Task<int> AddAmountByUserIdAsync(int userId, int amount);
+        System.Threading.Tasks.Task<WindowsFormsPrinter.ServiceReferencePrinter.User> AddAmountByUserIdAsync(int userId, int amount);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -63,11 +142,11 @@ namespace WindowsFormsPrinter.ServiceReferencePrinter {
             return base.Channel.GetAmountByUserIdAsync(userId);
         }
         
-        public int AddAmountByUserId(int userId, int amount) {
+        public WindowsFormsPrinter.ServiceReferencePrinter.User AddAmountByUserId(int userId, int amount) {
             return base.Channel.AddAmountByUserId(userId, amount);
         }
         
-        public System.Threading.Tasks.Task<int> AddAmountByUserIdAsync(int userId, int amount) {
+        public System.Threading.Tasks.Task<WindowsFormsPrinter.ServiceReferencePrinter.User> AddAmountByUserIdAsync(int userId, int amount) {
             return base.Channel.AddAmountByUserIdAsync(userId, amount);
         }
     }

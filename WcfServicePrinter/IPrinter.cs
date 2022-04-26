@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -14,6 +15,6 @@ namespace WcfServicePrinter
         int GetAmountByUserId(int userId);
 
         [OperationContract]
-        int AddAmountByUserId(int userId, int amount);
+        User AddAmountByUserId(int userId, int amount);
     }
 }

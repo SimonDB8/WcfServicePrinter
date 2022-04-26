@@ -140,6 +140,12 @@
     <None Include="Connected Services\ServiceReferencePrinter\Printer1.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\ServiceReferencePrinter\Printer2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReferencePrinter\WindowsFormsPrinter.ServiceReferencePrinter.User.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="ITServiceProjectBeaudDeBlasiDataSet.xsc">
       <DependentUpon>ITServiceProjectBeaudDeBlasiDataSet.xsd</DependentUpon>
     </None>

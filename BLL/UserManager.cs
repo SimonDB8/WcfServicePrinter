@@ -26,5 +26,10 @@ namespace BLL
         {
             return UserDb.AddAmountByUserId(userId, amount);
         }
+
+        public User getUserById(int userId)
+        {
+            return UserDb.getUserById(userId);
+        }
     }
 }
