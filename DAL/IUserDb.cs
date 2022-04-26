@@ -14,5 +14,9 @@ namespace DAL
        User AddAmountByUserId(int userId, int amount);
 
         User getUserById(int userId);
+
+        User getUserByUsername(string username);
+
+        User AddAmountByUsername(string username, int amount);
     }
 }

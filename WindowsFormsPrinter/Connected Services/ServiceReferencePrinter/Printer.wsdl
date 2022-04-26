@@ -19,6 +19,12 @@
   <wsdl:message name="IPrinter_AddAmountByUserId_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddAmountByUserIdResponse" />
   </wsdl:message>
+  <wsdl:message name="IPrinter_AddAmountByUsername_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddAmountByUsername" />
+  </wsdl:message>
+  <wsdl:message name="IPrinter_AddAmountByUsername_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddAmountByUsernameResponse" />
+  </wsdl:message>
   <wsdl:portType name="IPrinter">
     <wsdl:operation name="GetAmountByUserId">
       <wsdl:input wsaw:Action="http://tempuri.org/IPrinter/GetAmountByUserId" message="tns:IPrinter_GetAmountByUserId_InputMessage" />
@@ -27,6 +33,10 @@
     <wsdl:operation name="AddAmountByUserId">
       <wsdl:input wsaw:Action="http://tempuri.org/IPrinter/AddAmountByUserId" message="tns:IPrinter_AddAmountByUserId_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IPrinter/AddAmountByUserIdResponse" message="tns:IPrinter_AddAmountByUserId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAmountByUsername">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrinter/AddAmountByUsername" message="tns:IPrinter_AddAmountByUsername_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrinter/AddAmountByUsernameResponse" message="tns:IPrinter_AddAmountByUsername_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IPrinter" type="tns:IPrinter">
@@ -42,6 +52,15 @@
     </wsdl:operation>
     <wsdl:operation name="AddAmountByUserId">
       <soap:operation soapAction="http://tempuri.org/IPrinter/AddAmountByUserId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAmountByUsername">
+      <soap:operation soapAction="http://tempuri.org/IPrinter/AddAmountByUsername" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

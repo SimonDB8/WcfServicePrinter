@@ -29,28 +29,30 @@ namespace WindowsFormsPrinter
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.usernameAdminBox = new System.Windows.Forms.TextBox();
+            this.AdminAmountBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.AddAmountByUsernameButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.AdminNewAmount = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // textBox1
+            // usernameAdminBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(207, 215);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(405, 35);
-            this.textBox1.TabIndex = 1;
+            this.usernameAdminBox.Location = new System.Drawing.Point(207, 215);
+            this.usernameAdminBox.Margin = new System.Windows.Forms.Padding(5);
+            this.usernameAdminBox.Name = "usernameAdminBox";
+            this.usernameAdminBox.Size = new System.Drawing.Size(405, 35);
+            this.usernameAdminBox.TabIndex = 1;
             // 
-            // textBox2
+            // AdminAmountBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(207, 359);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(405, 35);
-            this.textBox2.TabIndex = 2;
+            this.AdminAmountBox.Location = new System.Drawing.Point(207, 359);
+            this.AdminAmountBox.Margin = new System.Windows.Forms.Padding(5);
+            this.AdminAmountBox.Name = "AdminAmountBox";
+            this.AdminAmountBox.Size = new System.Drawing.Size(405, 35);
+            this.AdminAmountBox.TabIndex = 2;
             // 
             // label2
             // 
@@ -73,16 +75,33 @@ namespace WindowsFormsPrinter
             this.label3.Text = "Montant";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // button1
+            // AddAmountByUsernameButton
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(430, 428);
-            this.button1.Margin = new System.Windows.Forms.Padding(5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(182, 80);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Ajouter";
-            this.button1.UseVisualStyleBackColor = false;
+            this.AddAmountByUsernameButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.AddAmountByUsernameButton.Location = new System.Drawing.Point(430, 428);
+            this.AddAmountByUsernameButton.Margin = new System.Windows.Forms.Padding(5);
+            this.AddAmountByUsernameButton.Name = "AddAmountByUsernameButton";
+            this.AddAmountByUsernameButton.Size = new System.Drawing.Size(182, 80);
+            this.AddAmountByUsernameButton.TabIndex = 5;
+            this.AddAmountByUsernameButton.Text = "Ajouter";
+            this.AddAmountByUsernameButton.UseVisualStyleBackColor = false;
+            this.AddAmountByUsernameButton.Click += new System.EventHandler(this.AddAmountByUsernameButton_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(202, 540);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(319, 29);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Nouveau montant disponible";
+            // 
+            // AdminNewAmount
+            // 
+            this.AdminNewAmount.Location = new System.Drawing.Point(207, 589);
+            this.AdminNewAmount.Name = "AdminNewAmount";
+            this.AdminNewAmount.Size = new System.Drawing.Size(305, 35);
+            this.AdminNewAmount.TabIndex = 7;
             // 
             // administration
             // 
@@ -90,11 +109,13 @@ namespace WindowsFormsPrinter
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
             this.ClientSize = new System.Drawing.Size(836, 654);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.AdminNewAmount);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.AddAmountByUsernameButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.AdminAmountBox);
+            this.Controls.Add(this.usernameAdminBox);
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "administration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -105,11 +126,13 @@ namespace WindowsFormsPrinter
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox usernameAdminBox;
+        private System.Windows.Forms.TextBox AdminAmountBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button AddAmountByUsernameButton;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox AdminNewAmount;
     }
 }
 

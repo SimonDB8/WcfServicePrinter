@@ -56,6 +56,45 @@ namespace DAL
             return result;
         }
 
+        public User AddAmountByUsername(string username, int amount)
+        {
+            User result = null;
+
+            try
+            {
+                using (SqlConnection cn = new SqlConnection(connectionString))
+                {
+                    string query = "UPDATE Users SET UserAmount=@amount WHERE UserName = @username";
+                    SqlCommand cmd = new SqlCommand(query, cn);
+                    cmd.Parameters.AddWithValue("@username", username);
+                    cmd.Parameters.AddWithValue("@amount", amount);
+                    cn.Open();
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+
+                        if (dr.Read())
+                        {
+                            result = new User();
+
+                            result.userId = (int)dr["userId"];
+                            result.userName = (string)dr["UserName"];
+                            result.userAmount = (int)dr["UserAmount"];
+                        }
+
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+
+            return result;
+        }
+
+
+
         public User GetAmountByUserId(int userId)
         {
             User result = null;
@@ -123,7 +162,39 @@ namespace DAL
         }
 
 
+        public User getUserByUsername(string username)
+        {
+            User result = null;
 
+            try
+            {
+                using (SqlConnection cn = new SqlConnection(connectionString))
+                {
+                    string query = "SELECt * FROM Users WHERE UserName = @username;";
+                    SqlCommand cmd = new SqlCommand(query, cn);
+                    cmd.Parameters.Add("@username", username);
+                    cn.Open();
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        if (dr.Read())
+                        {
+                            result = new User();
+
+                            result.userId = (int)dr["userId"];
+                            result.userName = (string)dr["UserName"];
+                            result.userAmount = (int)dr["UserAmount"];
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+
+            return result;
+        }
 
 
 

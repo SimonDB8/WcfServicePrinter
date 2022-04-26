@@ -31,5 +31,15 @@ namespace BLL
         {
             return UserDb.getUserById(userId);
         }
+
+        public User AddAmountByUsername(string username, int amount)
+        {
+            return UserDb.AddAmountByUsername(username, amount);
+        }
+
+        public User getUserByUsername(string username)
+        {
+            return UserDb.getUserByUsername(username);
+        }
     }
 }

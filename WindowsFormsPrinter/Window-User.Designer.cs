@@ -59,7 +59,7 @@ namespace WindowsFormsPrinter
             this.label3.Size = new System.Drawing.Size(98, 29);
             this.label3.TabIndex = 9;
             this.label3.Text = "Montant";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+           // this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // UID
             // 
@@ -70,7 +70,7 @@ namespace WindowsFormsPrinter
             this.UID.Size = new System.Drawing.Size(53, 29);
             this.UID.TabIndex = 8;
             this.UID.Text = "UID";
-            this.UID.Click += new System.EventHandler(this.label2_Click);
+           // this.UID.Click += new System.EventHandler(this.label2_Click);
             // 
             // AmountBox
             // 
@@ -79,7 +79,7 @@ namespace WindowsFormsPrinter
             this.AmountBox.Name = "AmountBox";
             this.AmountBox.Size = new System.Drawing.Size(405, 35);
             this.AmountBox.TabIndex = 7;
-            this.AmountBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            //this.AmountBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // UserIdBox
             // 
@@ -88,7 +88,7 @@ namespace WindowsFormsPrinter
             this.UserIdBox.Name = "UserIdBox";
             this.UserIdBox.Size = new System.Drawing.Size(405, 35);
             this.UserIdBox.TabIndex = 6;
-            this.UserIdBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+           // this.UserIdBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -105,7 +105,7 @@ namespace WindowsFormsPrinter
             this.NewAmountBox.Name = "NewAmountBox";
             this.NewAmountBox.Size = new System.Drawing.Size(405, 35);
             this.NewAmountBox.TabIndex = 12;
-            this.NewAmountBox.TextChanged += new System.EventHandler(this.NewAmountBox_TextChanged);
+            //this.NewAmountBox.TextChanged += new System.EventHandler(this.NewAmountBox_TextChanged);
             // 
             // user
             // 

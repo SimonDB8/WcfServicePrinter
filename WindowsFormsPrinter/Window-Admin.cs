@@ -12,9 +12,11 @@ namespace WindowsFormsPrinter
 {
     public partial class administration : Form
     {
+        private ServiceReferencePrinter.PrinterClient client;
         public administration()
         {
             InitializeComponent();
+            client = new ServiceReferencePrinter.PrinterClient();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -30,6 +32,12 @@ namespace WindowsFormsPrinter
         private void retourHome_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void AddAmountByUsernameButton_Click(object sender, EventArgs e)
+        {
+            var result = client.AddAmountByUsername(usernameAdminBox.Text, int.Parse(AdminAmountBox.Text));
+            AdminNewAmount.Text = result.userAmount.ToString();
         }
     }
 }

@@ -11,9 +11,14 @@ namespace BLL
     {
         User GetAmountByUserId(int userId);
 
+        User getUserById(int userId);
+
         User AddAmountByUserId(int userId, int amount);
 
-        User getUserById(int userId);
+        User AddAmountByUsername(string username, int amount);
+
+        User getUserByUsername(string username);
+
     }
 
    
