@@ -21,8 +21,8 @@ namespace WindowsFormsPrinter
 
         private void AddAmountByUserIdButton_Click(object sender, EventArgs e)
         {
-         var result = client.AddAmountByUserId(int.Parse(UserIdBox.Text), int.Parse(AmountBox.Text));
-            NewAmountBox.Text = result.userAmount.ToString();
+        var result = client.AddAmountByUserId(int.Parse(UserIdBox.Text), int.Parse(AmountBox.Text));
+        NewAmountBox.Text = result.userAmount.ToString();
         }
     }
 }

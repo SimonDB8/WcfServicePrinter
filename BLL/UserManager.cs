@@ -41,5 +41,10 @@ namespace BLL
         {
             return UserDb.getUserByUsername(username);
         }
+
+        public User getAmountByUsername(string username)
+        {
+            return UserDb.getAmountByUsername(username);
+        }
     }
 }

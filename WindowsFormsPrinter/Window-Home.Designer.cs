@@ -38,7 +38,9 @@ namespace WindowsFormsPrinter
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.nombreImperssionBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.getAmountByUsernameBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // userIdBox
@@ -50,7 +52,7 @@ namespace WindowsFormsPrinter
             // 
             // resultAmount
             // 
-            this.resultAmount.Location = new System.Drawing.Point(267, 170);
+            this.resultAmount.Location = new System.Drawing.Point(267, 180);
             this.resultAmount.Name = "resultAmount";
             this.resultAmount.Size = new System.Drawing.Size(132, 35);
             this.resultAmount.TabIndex = 3;
@@ -111,7 +113,7 @@ namespace WindowsFormsPrinter
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(64, 173);
+            this.label2.Location = new System.Drawing.Point(64, 185);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(197, 29);
             this.label2.TabIndex = 9;
@@ -126,12 +128,30 @@ namespace WindowsFormsPrinter
             this.label3.TabIndex = 10;
             this.label3.Text = "Nombre d\'impression";
             // 
-            // textBox1
+            // nombreImperssionBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(314, 254);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(85, 35);
-            this.textBox1.TabIndex = 11;
+            this.nombreImperssionBox.Location = new System.Drawing.Point(314, 254);
+            this.nombreImperssionBox.Name = "nombreImperssionBox";
+            this.nombreImperssionBox.Size = new System.Drawing.Size(85, 35);
+            this.nombreImperssionBox.TabIndex = 11;
+            this.nombreImperssionBox.TextChanged += new System.EventHandler(this.nombreImperssionBox_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(64, 134);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(129, 29);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "UserName";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // getAmountByUsernameBox
+            // 
+            this.getAmountByUsernameBox.Location = new System.Drawing.Point(211, 128);
+            this.getAmountByUsernameBox.Name = "getAmountByUsernameBox";
+            this.getAmountByUsernameBox.Size = new System.Drawing.Size(167, 35);
+            this.getAmountByUsernameBox.TabIndex = 13;
             // 
             // homeUser
             // 
@@ -139,7 +159,9 @@ namespace WindowsFormsPrinter
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
             this.ClientSize = new System.Drawing.Size(836, 654);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.getAmountByUsernameBox);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.nombreImperssionBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -169,6 +191,8 @@ namespace WindowsFormsPrinter
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox nombreImperssionBox;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox getAmountByUsernameBox;
     }
 }

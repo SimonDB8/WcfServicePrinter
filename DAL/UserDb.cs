@@ -198,6 +198,37 @@ namespace DAL
 
 
 
+        public User getAmountByUsername(string username)
+        {
+            User result = null;
+
+            try
+            {
+                using (SqlConnection cn = new SqlConnection(connectionString))
+                {
+                    string query = "SELECT UserAmount FROM Users where UserName = @username";
+                    SqlCommand cmd = new SqlCommand(query, cn);
+                    cmd.Parameters.AddWithValue("@username", username);
+                    cn.Open();
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        if (dr.Read())
+                        {
+                            result = new User();
+
+                            result.userAmount = (int)dr["UserAmount"];
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+
+            return result;
+        }
 
 
 

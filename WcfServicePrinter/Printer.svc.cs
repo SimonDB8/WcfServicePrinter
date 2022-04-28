@@ -38,5 +38,32 @@ namespace WcfServicePrinter
             userManager.AddAmountByUserId(user.userId, amount + user.userAmount);
             return userManager.getUserByUsername(username);
         }
+
+        public int GetAmountByUsername(string username)
+        {
+            IUserDb userDb = new UserDb();
+            IUserManager userManager = new UserManager(userDb);
+            var user = userManager.getAmountByUsername(username);
+            return user.userAmount;
+        }
+
+        public int Conversion(int userId)
+        {
+            IUserDb userDb = new UserDb();
+            IUserManager userManager = new UserManager(userDb);
+            var user = userManager.GetAmountByUserId(userId);
+            int nbImpression = (int)(user.userAmount/0.08);
+            return nbImpression;
+        }
+
+        public int ConversionByUsername(string username)
+        {
+            IUserDb userDb = new UserDb();
+            IUserManager userManager = new UserManager(userDb);
+            var user = userManager.getAmountByUsername(username);
+            int nbImpression = (int)(user.userAmount / 0.08);
+            return nbImpression;
+        }
+
     }
 }

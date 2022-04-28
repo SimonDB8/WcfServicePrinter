@@ -100,6 +100,12 @@ namespace WindowsFormsPrinter.ServiceReferencePrinter {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrinter/GetAmountByUserId", ReplyAction="http://tempuri.org/IPrinter/GetAmountByUserIdResponse")]
         System.Threading.Tasks.Task<int> GetAmountByUserIdAsync(int userId);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrinter/GetAmountByUsername", ReplyAction="http://tempuri.org/IPrinter/GetAmountByUsernameResponse")]
+        int GetAmountByUsername(string username);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrinter/GetAmountByUsername", ReplyAction="http://tempuri.org/IPrinter/GetAmountByUsernameResponse")]
+        System.Threading.Tasks.Task<int> GetAmountByUsernameAsync(string username);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrinter/AddAmountByUserId", ReplyAction="http://tempuri.org/IPrinter/AddAmountByUserIdResponse")]
         WindowsFormsPrinter.ServiceReferencePrinter.User AddAmountByUserId(int userId, int amount);
         
@@ -111,6 +117,18 @@ namespace WindowsFormsPrinter.ServiceReferencePrinter {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrinter/AddAmountByUsername", ReplyAction="http://tempuri.org/IPrinter/AddAmountByUsernameResponse")]
         System.Threading.Tasks.Task<WindowsFormsPrinter.ServiceReferencePrinter.User> AddAmountByUsernameAsync(string username, int amount);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrinter/Conversion", ReplyAction="http://tempuri.org/IPrinter/ConversionResponse")]
+        int Conversion(int userId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrinter/Conversion", ReplyAction="http://tempuri.org/IPrinter/ConversionResponse")]
+        System.Threading.Tasks.Task<int> ConversionAsync(int userId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrinter/ConversionByUsername", ReplyAction="http://tempuri.org/IPrinter/ConversionByUsernameResponse")]
+        int ConversionByUsername(string username);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrinter/ConversionByUsername", ReplyAction="http://tempuri.org/IPrinter/ConversionByUsernameResponse")]
+        System.Threading.Tasks.Task<int> ConversionByUsernameAsync(string username);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -148,6 +166,14 @@ namespace WindowsFormsPrinter.ServiceReferencePrinter {
             return base.Channel.GetAmountByUserIdAsync(userId);
         }
         
+        public int GetAmountByUsername(string username) {
+            return base.Channel.GetAmountByUsername(username);
+        }
+        
+        public System.Threading.Tasks.Task<int> GetAmountByUsernameAsync(string username) {
+            return base.Channel.GetAmountByUsernameAsync(username);
+        }
+        
         public WindowsFormsPrinter.ServiceReferencePrinter.User AddAmountByUserId(int userId, int amount) {
             return base.Channel.AddAmountByUserId(userId, amount);
         }
@@ -162,6 +188,22 @@ namespace WindowsFormsPrinter.ServiceReferencePrinter {
         
         public System.Threading.Tasks.Task<WindowsFormsPrinter.ServiceReferencePrinter.User> AddAmountByUsernameAsync(string username, int amount) {
             return base.Channel.AddAmountByUsernameAsync(username, amount);
+        }
+        
+        public int Conversion(int userId) {
+            return base.Channel.Conversion(userId);
+        }
+        
+        public System.Threading.Tasks.Task<int> ConversionAsync(int userId) {
+            return base.Channel.ConversionAsync(userId);
+        }
+        
+        public int ConversionByUsername(string username) {
+            return base.Channel.ConversionByUsername(username);
+        }
+        
+        public System.Threading.Tasks.Task<int> ConversionByUsernameAsync(string username) {
+            return base.Channel.ConversionByUsernameAsync(username);
         }
     }
 }

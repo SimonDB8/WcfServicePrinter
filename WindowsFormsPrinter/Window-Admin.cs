@@ -19,21 +19,6 @@ namespace WindowsFormsPrinter
             client = new ServiceReferencePrinter.PrinterClient();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void retourHome_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void AddAmountByUsernameButton_Click(object sender, EventArgs e)
         {
             var result = client.AddAmountByUsername(usernameAdminBox.Text, int.Parse(AdminAmountBox.Text));

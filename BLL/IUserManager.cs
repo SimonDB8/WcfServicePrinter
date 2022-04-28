@@ -19,6 +19,8 @@ namespace BLL
 
         User getUserByUsername(string username);
 
+        User getAmountByUsername(string username);
+
     }
 
    

@@ -28,8 +28,23 @@ namespace WindowsFormsPrinter
 
         private void searchButton_Click(object sender, EventArgs e)
         {
-            var result = client.GetAmountByUserId(int.Parse(userIdBox.Text));
-            resultAmount.Text = result.ToString();
+
+            if (userIdBox.TextLength <= 0)
+            {
+                var res = client.GetAmountByUsername(getAmountByUsernameBox.Text);
+                resultAmount.Text = res.ToString();
+                var res2 = client.ConversionByUsername(getAmountByUsernameBox.Text);
+                nombreImperssionBox.Text = res2.ToString();
+                
+            }
+            else
+            {
+                var res = client.GetAmountByUserId(int.Parse(userIdBox.Text));
+                resultAmount.Text = res.ToString();
+                var res2 = client.Conversion(int.Parse(userIdBox.Text));
+                nombreImperssionBox.Text = res2.ToString();
+            }
+
         }
 
         private void userPage_Click(object sender, EventArgs e)
@@ -53,6 +68,16 @@ namespace WindowsFormsPrinter
         private void homeUser_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nombreImperssionBox_TextChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }
