@@ -24,10 +24,18 @@ namespace WcfServicePrinter
 
         public int GetAmountByUserId(int userId)
         {
-            IUserDb userDb = new UserDb();
-            IUserManager userManager = new UserManager(userDb);
-            var user = userManager.GetAmountByUserId(userId);
-            return user.userAmount;
+            try
+            {
+                IUserDb userDb = new UserDb();
+                IUserManager userManager = new UserManager(userDb);
+                var user = userManager.GetAmountByUserId(userId);
+                return user.userAmount;
+            }
+            catch (Exception e)
+            {
+                return -1;
+            }
+            
         }
 
         public User AddAmountByUsername(string username, int amount)
@@ -39,12 +47,25 @@ namespace WcfServicePrinter
             return userManager.getUserByUsername(username);
         }
 
-        public int GetAmountByUsername(string username)
+        public int GetAmountByUsername(string username) 
         {
-            IUserDb userDb = new UserDb();
-            IUserManager userManager = new UserManager(userDb);
-            var user = userManager.getAmountByUsername(username);
-            return user.userAmount;
+
+            
+                IUserDb userDb = new UserDb();
+                IUserManager userManager = new UserManager(userDb);
+                var user = userManager.getAmountByUsername(username);
+            if (user!=null)
+            {
+                return user.userAmount;
+            }
+            else
+            {
+                return -1;
+            }
+
+                
+            
+                 
         }
 
         public int Conversion(int userId)
@@ -61,8 +82,16 @@ namespace WcfServicePrinter
             IUserDb userDb = new UserDb();
             IUserManager userManager = new UserManager(userDb);
             var user = userManager.getAmountByUsername(username);
-            int nbImpression = (int)(user.userAmount / 0.08);
-            return nbImpression;
+            if (user != null)
+            {
+                int nbImpression = (int)(user.userAmount / 0.08);
+                return nbImpression;
+            }
+            else
+            {
+                return -1;
+            }
+            
         }
 
     }

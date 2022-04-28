@@ -28,17 +28,24 @@ namespace WindowsFormsPrinter
 
         private void searchButton_Click(object sender, EventArgs e)
         {
-
+           
             if (userIdBox.TextLength <= 0)
             {
                 var res = client.GetAmountByUsername(getAmountByUsernameBox.Text);
                 resultAmount.Text = res.ToString();
                 var res2 = client.ConversionByUsername(getAmountByUsernameBox.Text);
                 nombreImperssionBox.Text = res2.ToString();
-                
+                if (int.Parse(resultAmount.Text) == -1)
+                {
+                    ExceptionHome exceptionHome = new ExceptionHome();
+                    exceptionHome.ShowDialog();
+                }
+                resultAmount.Text = " ";
+                nombreImperssionBox.Text = " ";
             }
             else
             {
+              
                 var res = client.GetAmountByUserId(int.Parse(userIdBox.Text));
                 resultAmount.Text = res.ToString();
                 var res2 = client.Conversion(int.Parse(userIdBox.Text));

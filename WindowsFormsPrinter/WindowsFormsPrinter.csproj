@@ -76,6 +76,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="ExceptionHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExceptionHome.Designer.cs">
+      <DependentUpon>ExceptionHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="ITServiceProjectBeaudDeBlasiDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -112,6 +118,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ExceptionHome.resx">
+      <DependentUpon>ExceptionHome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Window-Admin.resx">
       <DependentUpon>Window-Admin.cs</DependentUpon>
     </EmbeddedResource>
