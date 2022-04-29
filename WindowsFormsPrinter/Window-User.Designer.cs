@@ -36,12 +36,13 @@ namespace WindowsFormsPrinter
             this.UserIdBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.NewAmountBox = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // AddAmountByUserIdButton
             // 
             this.AddAmountByUserIdButton.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.AddAmountByUserIdButton.Location = new System.Drawing.Point(430, 419);
+            this.AddAmountByUserIdButton.Location = new System.Drawing.Point(458, 324);
             this.AddAmountByUserIdButton.Margin = new System.Windows.Forms.Padding(5);
             this.AddAmountByUserIdButton.Name = "AddAmountByUserIdButton";
             this.AddAmountByUserIdButton.Size = new System.Drawing.Size(182, 80);
@@ -53,47 +54,43 @@ namespace WindowsFormsPrinter
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(202, 306);
+            this.label3.Location = new System.Drawing.Point(129, 257);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 29);
             this.label3.TabIndex = 9;
             this.label3.Text = "Montant";
-           // this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // UID
             // 
             this.UID.AutoSize = true;
-            this.UID.Location = new System.Drawing.Point(202, 171);
+            this.UID.Location = new System.Drawing.Point(129, 177);
             this.UID.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.UID.Name = "UID";
             this.UID.Size = new System.Drawing.Size(53, 29);
             this.UID.TabIndex = 8;
             this.UID.Text = "UID";
-           // this.UID.Click += new System.EventHandler(this.label2_Click);
             // 
             // AmountBox
             // 
-            this.AmountBox.Location = new System.Drawing.Point(207, 340);
+            this.AmountBox.Location = new System.Drawing.Point(249, 254);
             this.AmountBox.Margin = new System.Windows.Forms.Padding(5);
             this.AmountBox.Name = "AmountBox";
-            this.AmountBox.Size = new System.Drawing.Size(405, 35);
+            this.AmountBox.Size = new System.Drawing.Size(391, 35);
             this.AmountBox.TabIndex = 7;
-            //this.AmountBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // UserIdBox
             // 
-            this.UserIdBox.Location = new System.Drawing.Point(207, 205);
+            this.UserIdBox.Location = new System.Drawing.Point(249, 177);
             this.UserIdBox.Margin = new System.Windows.Forms.Padding(5);
             this.UserIdBox.Name = "UserIdBox";
-            this.UserIdBox.Size = new System.Drawing.Size(405, 35);
+            this.UserIdBox.Size = new System.Drawing.Size(391, 35);
             this.UserIdBox.TabIndex = 6;
-           // this.UserIdBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(202, 532);
+            this.label1.Location = new System.Drawing.Point(129, 499);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(319, 29);
             this.label1.TabIndex = 11;
@@ -101,11 +98,20 @@ namespace WindowsFormsPrinter
             // 
             // NewAmountBox
             // 
-            this.NewAmountBox.Location = new System.Drawing.Point(207, 583);
+            this.NewAmountBox.Location = new System.Drawing.Point(458, 495);
             this.NewAmountBox.Name = "NewAmountBox";
-            this.NewAmountBox.Size = new System.Drawing.Size(405, 35);
+            this.NewAmountBox.Size = new System.Drawing.Size(182, 35);
             this.NewAmountBox.TabIndex = 12;
-            //this.NewAmountBox.TextChanged += new System.EventHandler(this.NewAmountBox_TextChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(302, 59);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(233, 49);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Utilisateur";
             // 
             // user
             // 
@@ -113,6 +119,7 @@ namespace WindowsFormsPrinter
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
             this.ClientSize = new System.Drawing.Size(836, 654);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.NewAmountBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.AddAmountByUserIdButton);
@@ -137,5 +144,6 @@ namespace WindowsFormsPrinter
         private System.Windows.Forms.TextBox UserIdBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox NewAmountBox;
+        private System.Windows.Forms.Label label6;
     }
 }

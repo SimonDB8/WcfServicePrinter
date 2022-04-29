@@ -39,9 +39,10 @@ namespace WindowsFormsPrinter
                 {
                     ExceptionHome exceptionHome = new ExceptionHome();
                     exceptionHome.ShowDialog();
+                    resultAmount.Text = " ";
+                    nombreImperssionBox.Text = " ";
                 }
-                resultAmount.Text = " ";
-                nombreImperssionBox.Text = " ";
+                
             }
             else
             {
@@ -50,6 +51,14 @@ namespace WindowsFormsPrinter
                 resultAmount.Text = res.ToString();
                 var res2 = client.Conversion(int.Parse(userIdBox.Text));
                 nombreImperssionBox.Text = res2.ToString();
+                if (int.Parse(resultAmount.Text) == -1)
+                {
+                    ExceptionHome exceptionHome = new ExceptionHome();
+                    exceptionHome.ShowDialog();
+                    resultAmount.Text = " ";
+                    nombreImperssionBox.Text = " ";
+                }
+               
             }
 
         }

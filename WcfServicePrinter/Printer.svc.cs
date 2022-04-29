@@ -24,17 +24,19 @@ namespace WcfServicePrinter
 
         public int GetAmountByUserId(int userId)
         {
-            try
-            {
                 IUserDb userDb = new UserDb();
                 IUserManager userManager = new UserManager(userDb);
                 var user = userManager.GetAmountByUserId(userId);
+            if (user != null)
+            {
                 return user.userAmount;
             }
-            catch (Exception e)
+            else
             {
                 return -1;
             }
+                
+           
             
         }
 
@@ -73,8 +75,15 @@ namespace WcfServicePrinter
             IUserDb userDb = new UserDb();
             IUserManager userManager = new UserManager(userDb);
             var user = userManager.GetAmountByUserId(userId);
-            int nbImpression = (int)(user.userAmount/0.08);
-            return nbImpression;
+            if (user != null)
+            {
+                int nbImpression = (int)(user.userAmount / 0.08);
+                return nbImpression;
+            }
+            else
+            {
+                return -1;
+            }
         }
 
         public int ConversionByUsername(string username)

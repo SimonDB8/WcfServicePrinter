@@ -42,6 +42,7 @@ namespace WindowsFormsPrinter
             this.label4 = new System.Windows.Forms.Label();
             this.getAmountByUsernameBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // userIdBox
@@ -131,7 +132,7 @@ namespace WindowsFormsPrinter
             // 
             // nombreImperssionBox
             // 
-            this.nombreImperssionBox.Location = new System.Drawing.Point(333, 433);
+            this.nombreImperssionBox.Location = new System.Drawing.Point(333, 449);
             this.nombreImperssionBox.Name = "nombreImperssionBox";
             this.nombreImperssionBox.Size = new System.Drawing.Size(397, 35);
             this.nombreImperssionBox.TabIndex = 11;
@@ -163,12 +164,23 @@ namespace WindowsFormsPrinter
             this.label5.TabIndex = 14;
             this.label5.Text = "possible (0.08 imp)";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(340, 51);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(141, 49);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Home";
+            // 
             // homeUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
             this.ClientSize = new System.Drawing.Size(836, 654);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.getAmountByUsernameBox);
             this.Controls.Add(this.label4);
@@ -206,5 +218,6 @@ namespace WindowsFormsPrinter
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox getAmountByUsernameBox;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }

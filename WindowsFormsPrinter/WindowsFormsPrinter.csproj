@@ -76,6 +76,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="ExceptionAjouterMontant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExceptionAjouterMontant.Designer.cs">
+      <DependentUpon>ExceptionAjouterMontant.cs</DependentUpon>
+    </Compile>
     <Compile Include="ExceptionHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ExceptionAjouterMontant.resx">
+      <DependentUpon>ExceptionAjouterMontant.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ExceptionHome.resx">
       <DependentUpon>ExceptionHome.cs</DependentUpon>
     </EmbeddedResource>

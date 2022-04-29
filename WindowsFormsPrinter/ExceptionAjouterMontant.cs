@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsPrinter
 {
-    public partial class ExceptionHome : Form
+    public partial class ExceptionAjouterMontant : Form
     {
-        public ExceptionHome()
+        public ExceptionAjouterMontant()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
